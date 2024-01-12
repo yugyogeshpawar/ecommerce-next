@@ -17,7 +17,7 @@ const Electronic = () => {
     <Fragment>
       <Helmet>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" type="image/x-icon" href={"/assets/images/favicon/7.png"} />
+        <link rel="icon" type="image/x-icon" href={"/assets/images/favicon/favicon.ico"} />
       </Helmet>
       <ModalComponent />
       <div className="container-fluid layout-8">

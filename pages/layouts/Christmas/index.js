@@ -25,7 +25,7 @@ const Christmas = () => {
       <div className="christmas">
         <Helmet>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="icon" type="image/x-icon" href={"/assets/images/favicon/1.png"} />
+          <link rel="icon" type="image/x-icon" href={"/assets/images/favicon/favicon.ico"} />
         </Helmet>
         <ModalComponent />
         <HeaderOne logoName={"logo/f5.png"} topClass="top-header" headerClass="header-christmas video-header" />

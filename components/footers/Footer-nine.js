@@ -10,8 +10,8 @@ const FooterNine = () => {
                     <Row>
                         <Col xl="6" md="6" sm="12">
                             <div className="footer-end">
-                                <p><i className="fa fa-copyright" aria-hidden="true"></i> 2023-24 themeforest powered by
-                                pixelstrap</p>
+                                <p><i className="fa fa-copyright" aria-hidden="true"></i>  powered by
+                                Quick Movers Packers</p>
                             </div>
                         </Col>
                         <Col xl="6" md="6" sm="12">

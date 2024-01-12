@@ -371,8 +371,8 @@ del {
     box-shadow: 0px 0px 8px #ddd;
     animation: smoothScroll 1s forwards;
     .brand-logo {
-      padding-top: 15px;
-      padding-bottom: 15px;
+      // padding-top: 15px;
+      padding-bottom: 29px;
     }
     .onhover-div {
       .show-div {
@@ -1405,8 +1405,8 @@ header {
   }
   .brand-logo {
     display: inline-block;
-    padding-top: 35px;
-    padding-bottom: 35px;
+    // padding-top: 35px;
+    padding-bottom: 28px;
   }
   .menu-left {
     display: flex;
@@ -7369,6 +7369,7 @@ footer {
 .footer-theme {
   .footer-logo {
     margin-bottom: 18px;
+    margin-top: -35px;
   }
   .sub-title {
     h4 {

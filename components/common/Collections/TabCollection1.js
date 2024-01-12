@@ -11,6 +11,7 @@ import { CompareContext } from "../../../helpers/Compare/CompareContext";
 import { CurrencyContext } from "../../../helpers/Currency/CurrencyContext";
 import emptySearch from "../../../public/assets/images/empty-search.jpg";
 
+
 const GET_PRODUCTS = gql`
   query products($type: _CategoryType!, $indexFrom: Int!, $limit: Int!) {
     products(type: $type, indexFrom: $indexFrom, limit: $limit) {
@@ -122,6 +123,144 @@ const TabContent = ({
   );
 };
 
+
+const dummyData = {
+  products: {
+    items: [
+      {
+        id: 1,
+        title: "Modern Sofa",
+        description: "A stylish and modern sofa for your living room.",
+        type: "furniture",
+        brand: "Furniture Co.",
+        category: "Sofas",
+        price: 599,
+        new: true,
+        stock: 15,
+        sale: false,
+        discount: 0,
+        variants: [
+          {
+            id: 101,
+            sku: "MODSOFA101",
+            size: "Large",
+            color: "Gray",
+            image_id: 1001,
+          },
+          {
+            id: 102,
+            sku: "MODSOFA102",
+            size: "Large",
+            color: "Blue",
+            image_id: 1002,
+          },
+        ],
+        images: [
+          {
+            image_id: 1001,
+            id: 1,
+            alt: "Modern Sofa - Gray",
+            src: "/images/modern-sofa-gray.jpg",
+          },
+          {
+            image_id: 1002,
+            id: 2,
+            alt: "Modern Sofa - Blue",
+            src: "/images/modern-sofa-blue.jpg",
+          },
+        ],
+      },
+      {
+        id: 2,
+        title: "Classic Dining Table",
+        description: "A timeless dining table with a wooden finish.",
+        type: "furniture",
+        brand: "Home Essentials",
+        category: "Dining Tables",
+        price: 399,
+        new: false,
+        stock: 10,
+        sale: true,
+        discount: 20,
+        variants: [
+          {
+            id: 201,
+            sku: "DININGTABLE201",
+            size: "Medium",
+            color: "Brown",
+            image_id: 2001,
+          },
+          {
+            id: 202,
+            sku: "DININGTABLE202",
+            size: "Large",
+            color: "White",
+            image_id: 2002,
+          },
+        ],
+        images: [
+          {
+            image_id: 2001,
+            id: 3,
+            alt: "Classic Dining Table - Brown",
+            src: "/images/classic-dining-table-brown.jpg",
+          },
+          {
+            image_id: 2002,
+            id: 4,
+            alt: "Classic Dining Table - White",
+            src: "/images/classic-dining-table-white.jpg",
+          },
+        ],
+      },
+      {
+        id: 3,
+        title: "Contemporary Desk",
+        description: "A sleek and contemporary desk for your workspace.",
+        type: "furniture",
+        brand: "Office Innovations",
+        category: "Desks",
+        price: 299,
+        new: true,
+        stock: 12,
+        sale: false,
+        discount: 0,
+        variants: [
+          {
+            id: 301,
+            sku: "DESK301",
+            size: "Small",
+            color: "Black",
+            image_id: 3001,
+          },
+          {
+            id: 302,
+            sku: "DESK302",
+            size: "Medium",
+            color: "White",
+            image_id: 3002,
+          },
+        ],
+        images: [
+          {
+            image_id: 3001,
+            id: 5,
+            alt: "Contemporary Desk - Black",
+            src: "/images/contemporary-desk-black.jpg",
+          },
+          {
+            image_id: 3002,
+            id: 6,
+            alt: "Contemporary Desk - White",
+            src: "/images/contemporary-desk-white.jpg",
+          },
+        ],
+      },
+      // Add more products if needed
+    ],
+  },
+};
+
 const SpecialProducts = ({
   type,
   fluid,
@@ -149,6 +288,7 @@ const SpecialProducts = ({
       indexFrom: 0,
       limit: 8,
     },
+    data: dummyData,
   });
 
 
@@ -196,7 +336,7 @@ const SpecialProducts = ({
 
             <TabPanel>
               <TabContent
-                data={data}
+                data={dummyData}
                 loading={loading}
                 startIndex={0}
                 endIndex={8}
@@ -206,7 +346,7 @@ const SpecialProducts = ({
             </TabPanel>
             <TabPanel>
               <TabContent
-                data={data}
+                data={dummyData}
                 loading={loading}
                 startIndex={0}
                 endIndex={8}
@@ -216,7 +356,7 @@ const SpecialProducts = ({
             </TabPanel>
             <TabPanel>
               <TabContent
-                data={data}
+                data={dummyData}
                 loading={loading}
                 startIndex={0}
                 endIndex={8}
