@@ -6,7 +6,34 @@ const productSchema = new mongoose.Schema({
   id: String,
   slug: String,
   shop: {
-    // ... (Define the structure for the shop field)
+    id: String,
+    slug: String,
+    user: {
+      id: String,
+      email: String,
+      phone: String,
+      avatar: String,
+      password: String,
+      dateOfBirth: Date,
+      verified: Boolean,
+      name: {
+        firstName: String,
+        lastName: String,
+      },
+    },
+    email: String,
+    name: String,
+    phone: String,
+    address: String,
+    verified: Boolean,
+    coverPicture: String,
+    profilePicture: String,
+    socialLinks: {
+      facebook: String,
+      youtube: String,
+      twitter: String,
+      instagram: String,
+    },
   },
   title: String,
   brand: String,
@@ -18,7 +45,9 @@ const productSchema = new mongoose.Schema({
   images: [String],
   categories: [String],
   status: String,
-  reviews: [{ /* Define the structure for the reviews field */ }],
+  reviews: [{
+    // Define the structure for the reviews field
+  }],
   rating: Number,
   for: {
     demo: String,
