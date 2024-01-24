@@ -10,6 +10,7 @@ const createProduct = async (req, res) => {
     res.status(201).json(savedProduct);
   } catch (error) {
     res.status(500).json({ error: 'Internal Server Error' });
+    console.log(error);
   }
 };
 
