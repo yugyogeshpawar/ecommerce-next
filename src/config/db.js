@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Connection = (username, password) => {
     
-    const URL = 'mongodb+srv://jaylunagariya:Jay1501@cluster0.wp4chqh.mongodb.net/'
+    const URL = 'mongodb+srv://jaylunagariya:Jay1501@cluster0.wp4chqh.mongodb.net/furniture'
 
     try{
         mongoose.connect(URL);
