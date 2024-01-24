@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 mongoose.set('strictQuery', true);
 const {Connection} = require('./config/db');
-// const Router = require('./router/router');
+const Router = require('./router/router');
 
 require("dotenv").config(); 
 
@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }))
 
 //Router 
-// app.use('/', Router)
+app.use('/api', Router)
 
 //Database
 const username = process.env.DB_USERNAME
